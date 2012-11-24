@@ -23,7 +23,7 @@ static volatile enum state_t state;
 
 int IsButtonPressed()
 {
-	return (PINB & 0b00010000);
+	return !(PINB & 0b00010000);
 }
 
 ISR(TIMER1_COMPA_vect)
